@@ -84,7 +84,7 @@ expected2 = y2_test
 for (p,e) in zip(predicted2[::5], expected2[::5]): 
     print(f"predicted: {p:.2f}, expected: {e:.2f}")
 
-predict = (lambda x: lr2.coef_ * x + lr2.intercept_) #kinda mx+b formula
+predict = (lambda x: lr2.coef_ * x + lr2.intercept_) 
 
 print(predict(2020))
 print(predict(1890))

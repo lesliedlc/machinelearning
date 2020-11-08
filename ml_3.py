@@ -43,7 +43,7 @@ for feature in cali.feature_names:
         legend = False,
     )
 
-plt.show()
+#plt.show()
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -85,4 +85,9 @@ axes.set_xlim(start,end)
 axes.set_ylim(start,end)
 
 line = plt2.plot([start,end],[start,end],"k--" ) #black dotted lines = k--
+
+sns.set(font_scale = 1)
+sns.set_style("whitegrid")
+grid = sns.pairplot(data = cali_df, vars = cali_df.columns[0:4])
+
 plt2.show()
